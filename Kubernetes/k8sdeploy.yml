@@ -1,0 +1,31 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: samplesbook
+spec: 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sample-k8s-app
+    spec:
+      containers:
+        - name: sample-services-app
+          image: aliscontainerregistry.azurecr.io/sampledockerhubapplication:latest
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+      - name: alisk8sclustersecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-k8s-app
+spec:
+  ports:
+    - name: http-port
+      port: 80
+      targetPort: 80
+  selector:
+    app: sample-k8s-app
+  type: LoadBalancer

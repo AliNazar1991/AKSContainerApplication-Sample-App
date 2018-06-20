@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  sampledockerhubapplication:
+    image: aliscontainerregistry.azurecr.io/sampledockerhubapplication
+    build:
+      context: .
+      dockerfile: sampledockerhubapplication/Dockerfile

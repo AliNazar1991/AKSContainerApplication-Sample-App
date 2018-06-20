@@ -1,0 +1,10 @@
+{
+  "appId": "4d432d34-e2fa-4817-b786-e89157b4a6fb",
+  "displayName": "AlisClustersContributorServicePrincipal",
+  "name": "http://AlisClustersContributorServicePrincipal",
+  "password": "5b6af11c-59ef-48df-b5e1-5009d23a9ed9",
+  "tenant": "ee852c63-67ce-41b0-914a-aac6bfeb8637"
+}
+
+a6fb --docker-password 5b6af11c-59ef-48df-b5e1-5009d23a9ed9
+secret "alisk8sclustersecret" created
